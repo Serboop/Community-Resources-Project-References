@@ -17,10 +17,9 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
-            min-height: 100vh;
-            padding: 20px;
-            padding-top: 100px;
+            background: #f8faf9;
+            color: #1a1a1a;
+            line-height: 1.6;
         }
         
         .nav {
@@ -28,10 +27,11 @@
             top: 0;
             left: 0;
             right: 0;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7e6;
             z-index: 1000;
-            padding: 15px 20px;
+            padding: 16px 24px;
         }
         
         .nav-container {
@@ -39,159 +39,153 @@
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
             justify-content: center;
             align-items: center;
         }
         
         .nav-link {
             padding: 8px 16px;
-            background: #f7fafc;
-            border: 2px solid #9ae6b4;
-            border-radius: 8px;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
             text-decoration: none;
-            color: #22543d;
-            font-weight: 600;
+            color: #4a5568;
+            font-weight: 500;
             font-size: 14px;
             transition: all 0.2s;
         }
         
         .nav-link:hover {
-            background: #9ae6b4;
-            transform: translateY(-2px);
+            background: #e8f5f0;
+            color: #2d7a6e;
         }
         
         .container {
-            max-width: 650px;
+            max-width: 800px;
             width: 100%;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-            padding: 40px 30px;
-            margin: 0 auto 30px;
+            margin: 0 auto;
+            padding: 100px 24px 60px;
         }
         
-        .header {
+        .hero {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 60px;
+            padding: 40px 0;
         }
         
         h1 {
-            font-size: 32px;
-            color: #22543d;
-            margin-bottom: 12px;
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
         }
         
         .subtitle {
-            color: #4a5568;
-            font-size: 18px;
-            line-height: 1.5;
+            color: #6b7280;
+            font-size: 20px;
+            font-weight: 400;
         }
         
         .emergency-banner {
-            background: #feb2b2;
-            border-left: 4px solid #c53030;
-            padding: 16px;
-            margin-bottom: 30px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 4px solid #dc2626;
+            padding: 24px;
+            margin-bottom: 48px;
+            border-radius: 12px;
         }
         
         .emergency-banner h2 {
-            color: #742a2a;
+            color: #991b1b;
             font-size: 18px;
+            font-weight: 600;
             margin-bottom: 8px;
         }
         
         .emergency-banner p {
-            color: #742a2a;
-            font-size: 20px;
-            font-weight: bold;
+            color: #991b1b;
+            font-size: 22px;
+            font-weight: 600;
         }
         
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 56px;
             scroll-margin-top: 100px;
         }
         
         .section h2 {
-            font-size: 22px;
-            color: #2d3748;
-            margin-bottom: 16px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #9ae6b4;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            letter-spacing: -0.3px;
         }
         
         .link-item {
             display: block;
-            padding: 18px;
-            margin-bottom: 14px;
-            background: #f7fafc;
-            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            background: white;
+            border-radius: 12px;
             text-decoration: none;
-            color: #2d3748;
-            transition: all 0.2s ease;
-            border: 2px solid #e2e8f0;
+            color: #1a1a1a;
+            transition: all 0.25s ease;
+            border: 1px solid #e5e7e6;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
         
         .link-item:hover {
-            background: #edf2f7;
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-            border-color: #48bb78;
-        }
-        
-        .link-item:active {
-            transform: translateY(0);
+            box-shadow: 0 8px 24px rgba(45, 122, 110, 0.12);
+            border-color: #a8d5cc;
         }
         
         .link-title {
             font-weight: 600;
-            font-size: 18px;
+            font-size: 17px;
             margin-bottom: 6px;
-            color: #276749;
+            color: #2d7a6e;
         }
         
         .link-description {
             font-size: 15px;
-            color: #718096;
-            line-height: 1.4;
+            color: #6b7280;
         }
         
         .phone-link {
-            background: #c6f6d5;
-            border-color: #48bb78;
+            background: linear-gradient(135deg, #d1f4e8 0%, #e8f5f0 100%);
+            border-color: #81d4bb;
         }
         
         .phone-link .link-title {
-            color: #22543d;
+            color: #1e6b5a;
         }
         
         .citation {
-            padding: 16px;
-            margin-bottom: 14px;
-            background: #f7fafc;
-            border-radius: 10px;
-            border: 2px solid #e2e8f0;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e5e7e6;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
         
         .citation-title {
             font-weight: 600;
             font-size: 16px;
-            color: #2d3748;
-            margin-bottom: 6px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
         }
         
         .citation-info {
             font-size: 14px;
-            color: #718096;
-            line-height: 1.5;
+            color: #6b7280;
+            line-height: 1.6;
         }
         
         .citation-link {
-            color: #48bb78;
+            color: #2d7a6e;
             text-decoration: none;
             font-weight: 500;
         }
@@ -200,23 +194,45 @@
             text-decoration: underline;
         }
         
+        .intro-text {
+            color: #6b7280;
+            margin-bottom: 28px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
         .footer {
             text-align: center;
-            margin-top: 35px;
-            padding-top: 20px;
-            border-top: 2px solid #e2e8f0;
-            color: #718096;
+            margin-top: 72px;
+            padding-top: 32px;
+            border-top: 1px solid #e5e7e6;
+            color: #9ca3af;
             font-size: 15px;
-            line-height: 1.6;
+        }
+        
+        .footer p {
+            margin-bottom: 8px;
+        }
+        
+        .footer strong {
+            color: #6b7280;
         }
 
         @media (max-width: 600px) {
-            body {
-                padding-top: 140px;
+            h1 {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .section h2 {
+                font-size: 24px;
             }
             
             .nav-link {
-                font-size: 12px;
+                font-size: 13px;
                 padding: 6px 12px;
             }
         }
@@ -225,30 +241,30 @@
 <body>
     <nav class="nav">
         <div class="nav-container">
-            <a href="#home" class="nav-link">🏠 Home</a>
+            <a href="#home" class="nav-link">Home</a>
             <a href="#shelter" class="nav-link">Shelter</a>
             <a href="#food" class="nav-link">Food</a>
             <a href="#healthcare" class="nav-link">Healthcare</a>
             <a href="#employment" class="nav-link">Employment</a>
             <a href="#basic-needs" class="nav-link">Basic Needs</a>
             <a href="#donate" class="nav-link">Donate</a>
-            <a href="#research" class="nav-link">📚 Research</a>
+            <a href="#research" class="nav-link">Research</a>
         </div>
     </nav>
 
-    <div class="container" id="home">
-        <div class="header">
-            <h1>🤝 Community Resources</h1>
-            <p class="subtitle">Help and support services available in our community</p>
+    <div class="container">
+        <div class="hero" id="home">
+            <h1>Community Resources</h1>
+            <p class="subtitle">Support services available in our community</p>
         </div>
         
         <div class="emergency-banner">
-            <h2>🚨 Emergency Help</h2>
-            <p>Call 911 for immediate emergency assistance</p>
+            <h2>Emergency Help</h2>
+            <p>Call 911 for immediate assistance</p>
         </div>
         
         <div class="section" id="shelter">
-            <h2>🏠 Shelter & Housing</h2>
+            <h2>Shelter & Housing</h2>
             <a href="tel:211" class="link-item phone-link">
                 <div class="link-title">Call 211 - Housing Hotline</div>
                 <div class="link-description">24/7 assistance finding emergency shelter and housing resources</div>
@@ -264,7 +280,7 @@
         </div>
         
         <div class="section" id="food">
-            <h2>🍲 Food & Meals</h2>
+            <h2>Food & Meals</h2>
             <a href="https://example.com/food-banks" class="link-item">
                 <div class="link-title">Food Bank Locations</div>
                 <div class="link-description">Free food distribution sites and pantries near you</div>
@@ -276,7 +292,7 @@
         </div>
         
         <div class="section" id="healthcare">
-            <h2>🏥 Healthcare</h2>
+            <h2>Healthcare</h2>
             <a href="https://example.com/free-clinics" class="link-item">
                 <div class="link-title">Free & Low-Cost Clinics</div>
                 <div class="link-description">Medical care regardless of ability to pay</div>
@@ -292,7 +308,7 @@
         </div>
         
         <div class="section" id="employment">
-            <h2>💼 Employment & Services</h2>
+            <h2>Employment & Services</h2>
             <a href="https://example.com/job-training" class="link-item">
                 <div class="link-title">Job Training & Placement</div>
                 <div class="link-description">Free skills training and employment assistance</div>
@@ -308,7 +324,7 @@
         </div>
         
         <div class="section" id="basic-needs">
-            <h2>🧥 Basic Needs</h2>
+            <h2>Basic Needs</h2>
             <a href="https://example.com/clothing" class="link-item">
                 <div class="link-title">Clothing & Supplies</div>
                 <div class="link-description">Free clothing, hygiene items, and essential supplies</div>
@@ -320,7 +336,7 @@
         </div>
         
         <div class="section" id="donate">
-            <h2>💝 Ways to Help & Donate</h2>
+            <h2>Ways to Help</h2>
             <a href="https://example.com/donate-money" class="link-item">
                 <div class="link-title">Make a Financial Donation</div>
                 <div class="link-description">Support local organizations serving our community</div>
@@ -340,8 +356,8 @@
         </div>
         
         <div class="section" id="research">
-            <h2>📚 Research & Studies</h2>
-            <p style="color: #4a5568; margin-bottom: 20px; line-height: 1.6;">
+            <h2>Research & Studies</h2>
+            <p class="intro-text">
                 The following studies and research informed this resource page and highlight the importance of accessible community support.
             </p>
             
@@ -373,7 +389,7 @@
         <div class="footer">
             <p><strong>You are not alone.</strong></p>
             <p>Help is available. All services are confidential.</p>
-            <p style="margin-top: 10px; font-size: 14px;">Last updated: November 2025</p>
+            <p style="margin-top: 16px; font-size: 14px;">Last updated: November 2025</p>
         </div>
     </div>
 </body>
