@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+            min-height: 100vh;
+            padding: 20px;
+            padding-top: 100px;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 15px 20px;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-link {
+            padding: 8px 16px;
+            background: #f7fafc;
+            border: 2px solid #9ae6b4;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #22543d;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            background: #9ae6b4;
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            max-width: 650px;
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            padding: 40px 30px;
+            margin: 0 auto 30px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            color: #22543d;
+            margin-bottom: 12px;
+        }
+        
+        .subtitle {
+            color: #4a5568;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        .emergency-banner {
+            background: #feb2b2;
+            border-left: 4px solid #c53030;
+            padding: 16px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        
+        .emergency-banner h2 {
+            color: #742a2a;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        
+        .emergency-banner p {
+            color: #742a2a;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            scroll-margin-top: 100px;
+        }
+        
+        .section h2 {
+            font-size: 22px;
+            color: #2d3748;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #9ae6b4;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .link-item {
+            display: block;
+            padding: 18px;
+            margin-bottom: 14px;
+            background: #f7fafc;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #2d3748;
+            transition: all 0.2s ease;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .link-item:hover {
+            background: #edf2f7;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            border-color: #48bb78;
+        }
+        
+        .link-item:active {
+            transform: translateY(0);
+        }
+        
+        .link-title {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 6px;
+            color: #276749;
+        }
+        
+        .link-description {
+            font-size: 15px;
+            color: #718096;
+            line-height: 1.4;
+        }
+        
+        .phone-link {
+            background: #c6f6d5;
+            border-color: #48bb78;
+        }
+        
+        .phone-link .link-title {
+            color: #22543d;
+        }
+        
+        .citation {
+            padding: 16px;
+            margin-bottom: 14px;
+            background: #f7fafc;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .citation-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: #2d3748;
+            margin-bottom: 6px;
+        }
+        
+        .citation-info {
+            font-size: 14px;
+            color: #718096;
+            line-height: 1.5;
+        }
+        
+        .citation-link {
+            color: #48bb78;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .citation-link:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding-top: 140px;
+            }
+            
+            .nav-link {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-link">🏠 Home</a>
+            <a href="#shelter" class="nav-link">Shelter</a>
+            <a href="#food" class="nav-link">Food</a>
+            <a href="#healthcare" class="nav-link">Healthcare</a>
+            <a href="#employment" class="nav-link">Employment</a>
+            <a href="#basic-needs" class="nav-link">Basic Needs</a>
+            <a href="#donate" class="nav-link">Donate</a>
+            <a href="#research" class="nav-link">📚 Research</a>
+        </div>
+    </nav>
+
+    <div class="container" id="home">
+        <div class="header">
+            <h1>🤝 Community Resources</h1>
+            <p class="subtitle">Help and support services available in our community</p>
+        </div>
+        
+        <div class="emergency-banner">
+            <h2>🚨 Emergency Help</h2>
+            <p>Call 911 for immediate emergency assistance</p>
+        </div>
+        
+        <div class="section" id="shelter">
+            <h2>🏠 Shelter & Housing</h2>
+            <a href="tel:211" class="link-item phone-link">
+                <div class="link-title">Call 211 - Housing Hotline</div>
+                <div class="link-description">24/7 assistance finding emergency shelter and housing resources</div>
+            </a>
+            <a href="https://example.com/shelters" class="link-item">
+                <div class="link-title">Local Shelter Directory</div>
+                <div class="link-description">Find emergency and transitional housing in your area</div>
+            </a>
+            <a href="https://example.com/housing-assistance" class="link-item">
+                <div class="link-title">Housing Assistance Programs</div>
+                <div class="link-description">Information on rental assistance and housing programs</div>
+            </a>
+        </div>
+        
+        <div class="section" id="food">
+            <h2>🍲 Food & Meals</h2>
+            <a href="https://example.com/food-banks" class="link-item">
+                <div class="link-title">Food Bank Locations</div>
+                <div class="link-description">Free food distribution sites and pantries near you</div>
+            </a>
+            <a href="https://example.com/meal-programs" class="link-item">
+                <div class="link-title">Free Meal Programs</div>
+                <div class="link-description">Daily meal services and soup kitchens</div>
+            </a>
+        </div>
+        
+        <div class="section" id="healthcare">
+            <h2>🏥 Healthcare</h2>
+            <a href="https://example.com/free-clinics" class="link-item">
+                <div class="link-title">Free & Low-Cost Clinics</div>
+                <div class="link-description">Medical care regardless of ability to pay</div>
+            </a>
+            <a href="https://example.com/mental-health" class="link-item">
+                <div class="link-title">Mental Health Services</div>
+                <div class="link-description">Counseling and crisis support resources</div>
+            </a>
+            <a href="https://example.com/substance-help" class="link-item">
+                <div class="link-title">Substance Use Support</div>
+                <div class="link-description">Treatment programs and recovery services</div>
+            </a>
+        </div>
+        
+        <div class="section" id="employment">
+            <h2>💼 Employment & Services</h2>
+            <a href="https://example.com/job-training" class="link-item">
+                <div class="link-title">Job Training & Placement</div>
+                <div class="link-description">Free skills training and employment assistance</div>
+            </a>
+            <a href="https://example.com/id-documents" class="link-item">
+                <div class="link-title">ID & Document Help</div>
+                <div class="link-description">Assistance obtaining vital documents and identification</div>
+            </a>
+            <a href="https://example.com/benefits" class="link-item">
+                <div class="link-title">Benefits & Financial Assistance</div>
+                <div class="link-description">Apply for SNAP, Medicaid, and other support programs</div>
+            </a>
+        </div>
+        
+        <div class="section" id="basic-needs">
+            <h2>🧥 Basic Needs</h2>
+            <a href="https://example.com/clothing" class="link-item">
+                <div class="link-title">Clothing & Supplies</div>
+                <div class="link-description">Free clothing, hygiene items, and essential supplies</div>
+            </a>
+            <a href="https://example.com/showers-laundry" class="link-item">
+                <div class="link-title">Showers & Laundry</div>
+                <div class="link-description">Locations offering free showers and laundry services</div>
+            </a>
+        </div>
+        
+        <div class="section" id="donate">
+            <h2>💝 Ways to Help & Donate</h2>
+            <a href="https://example.com/donate-money" class="link-item">
+                <div class="link-title">Make a Financial Donation</div>
+                <div class="link-description">Support local organizations serving our community</div>
+            </a>
+            <a href="https://example.com/donate-items" class="link-item">
+                <div class="link-title">Donate Items & Supplies</div>
+                <div class="link-description">Find what's needed and where to drop off donations</div>
+            </a>
+            <a href="https://example.com/volunteer" class="link-item">
+                <div class="link-title">Volunteer Opportunities</div>
+                <div class="link-description">Give your time to help serve meals, organize drives, and more</div>
+            </a>
+            <a href="https://example.com/wishlist" class="link-item">
+                <div class="link-title">Most Needed Items</div>
+                <div class="link-description">Current priority needs and wish lists from local shelters</div>
+            </a>
+        </div>
+        
+        <div class="section" id="research">
+            <h2>📚 Research & Studies</h2>
+            <p style="color: #4a5568; margin-bottom: 20px; line-height: 1.6;">
+                The following studies and research informed this resource page and highlight the importance of accessible community support.
+            </p>
+            
+            <div class="citation">
+                <div class="citation-title">Study Title Here</div>
+                <div class="citation-info">
+                    Author(s). (Year). Journal or Publication Name. <br>
+                    <a href="https://example.com/study1" class="citation-link" target="_blank">View Study →</a>
+                </div>
+            </div>
+            
+            <div class="citation">
+                <div class="citation-title">Another Research Paper</div>
+                <div class="citation-info">
+                    Author(s). (Year). Journal or Publication Name. <br>
+                    <a href="https://example.com/study2" class="citation-link" target="_blank">View Study →</a>
+                </div>
+            </div>
+            
+            <div class="citation">
+                <div class="citation-title">Third Study Reference</div>
+                <div class="citation-info">
+                    Author(s). (Year). Journal or Publication Name. <br>
+                    <a href="https://example.com/study3" class="citation-link" target="_blank">View Study →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>You are not alone.</strong></p>
+            <p>Help is available. All services are confidential.</p>
+            <p style="margin-top: 10px; font-size: 14px;">Last updated: November 2025</p>
+        </div>
+    </div>
+</body>
+</html>
